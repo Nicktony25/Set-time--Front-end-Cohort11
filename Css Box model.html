@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Box{
+            padding: 30px 40px;
+            margin: 0 0 800px;
+        }
+        button{
+            padding: 20px 30px ;
+        }
+        p{
+            margin: 8px 0 12px 0;
+        }
+        h1{
+            border: 3px solid ;
+            width: fit-content;
+        }
+        .Mine{
+           padding: 0.1px;
+            height: 500px;
+            background-color: cyan;
+            width: 100%;
+            background-image: url("Assets/Screenshot_20231110-214638_Gallery.jpg");
+            background-size: cover;
+            color: white;
+            background-position: 0 -100px;
+        }
+    </style>
+</head>
+<body>
+   <div class="Mine">
+    <div class="Box">
+        <h1>Welcome to My Website</h1>
+        <p> We are all about tech        </p>
+        <button>Submit....</button>
+    </div>
+   </div>
+</body>
+</html>

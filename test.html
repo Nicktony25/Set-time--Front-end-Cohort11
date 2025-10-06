@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Media Screening Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .content-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .mobile-only {
+            display: none;
+        }
+        
+        .desktop-only {
+            display: block;
+        }
+        
+        /* Media query for screens smaller than 768px (typical mobile devices) */
+        @media screen and (max-width: 767px) {
+            .mobile-only {
+                display: block;
+            }
+            
+            .desktop-only {
+                display: none;
+            }
+            
+            body {
+                background-color: lightblue; 
+                padding: 10px;
+            }
+        }
+        
+        /* Media query for screens between 768px and 1024px (tablets) */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                background-color: lightgreen;
+            }
+            
+            .content-box {
+                background-color: #e0e0e0;
+            }
+        }
+        
+        /* Media query for screens larger than 1024px (desktops) */
+        @media screen and (min-width: 1025px) {
+            body {
+                background-color: lightcoral;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+        
+        /* Media query for high-resolution displays */
+        @media screen and (min-resolution: 2dppx) {
+            .high-res-image {
+                /* Serve higher resolution images */
+                background-image: url('image@2x.jpg');
+            }
+        }
+        
+        /* Media query for portrait orientation */
+        @media (orientation: portrait) {
+            .orientation-warning {
+                display: block;
+                color: red;
+                font-weight: bold;
+            }
+        }
+        
+        /* Media query for landscape orientation */
+        @media (orientation: landscape) {
+            .orientation-warning {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Media Screening Example</h1>
+        
+        <div class="content-box">
+            <p>This content is always visible regardless of screen size.</p>
+        </div>
+        
+        <div class="content-box mobile-only">
+            <p>This content only appears on mobile devices (screen width less than 768px).</p>
+        </div>
+        
+        <div class="content-box desktop-only">
+            <p>This content only appears on desktop devices (screen width greater than 1024px).</p>
+        </div>
+        
+        <div class="content-box">
+            <p class="orientation-warning">For the best experience, please rotate your device to landscape mode.</p>
+        </div>
+        
+        <div class="content-box high-res-image">
+            <p>This element uses different images based on screen resolution.</p>
+        </div>
+    </div>
+    <!-- Solid icons -->
+    <i class="fas fa-home"></i> Home<br>
+    <i class="fas fa-user"></i> User<br>
+    <i class="fas fa-envelope"></i> Email<br>
+
+    <!-- Regular icons -->
+    <i class="far fa-star"></i> Star<br>
+
+    <!-- Brand icons -->
+    <i class="fab fa-facebook"></i> Facebook<br>
+    <i class="fab fa-twitter"></i> Twitter<br>
+    <i class="fab fa-github"></i> GitHub
+
+
+    !DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .icon-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .superscript {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification badge on bell icon -->
+    <div class="icon-container">
+        <i class="fas fa-bell fa-2x"></i>
+        <span class="superscript">3</span>
+    </div>
+
+    <!-- Cart with item count -->
+    <div class="icon-container">
+        <i class="fas fa-shopping-cart fa-2x"></i>
+        <span class="superscript">5</span>
+    </div>
+
+    <!-- Mail with unread count -->
+    <div class="icon-container">
+        <i class="fas fa-envelope fa-2x"></i>
+        <span class="superscript">12</span>
+    </div>
+</body>
+</html>
+</body>
+</html>
